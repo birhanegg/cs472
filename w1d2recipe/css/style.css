@@ -1,5 +1,4 @@
 body{
-    background-color:white;
     font-family:courier,arial,helvetica;
     background-image: url("../images/silverware.jpg");
 }
@@ -29,7 +28,6 @@ img{
 .lined{
     text-decoration: line-through;
 }
-
 .comment{
     font-family: 'Margarine', 'Helvetica', arial;
     font-style: italic;
