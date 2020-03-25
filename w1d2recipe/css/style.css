@@ -1,0 +1,42 @@
+body{
+    background-color:white;
+    font-family:courier,arial,helvetica;
+}
+h1.title { 
+    color:olive;
+    text-decoration: underline;
+    background-color: #dddeee;
+} 
+.alignCenter{
+    text-align: center;
+}
+
+p > strong {
+    color: cyan;
+}
+img{
+    width: 200px;
+    height: 200px;
+}
+.img2{
+    width: auto;
+    height: auto;
+}
+.underline {
+    text-decoration: underline;
+  }
+.line{
+    text-decoration: line-through;
+}
+
+.comment{
+    font-family: 'Margarine', 'Helvetica', arial;
+    font-style: italic;
+    background-color:#ffe085;
+    padding: 5px;
+    margin: 10px 5px 5px  10px ;
+
+}
+.link a{
+    color:olive;
+}
