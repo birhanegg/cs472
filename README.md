@@ -3,6 +3,9 @@
 
 - Lab-1 : [Personal web Page](https://birhanegg.github.io/cs472/lab1/)
 - Lab-2 : [About Page](https://birhanegg.github.io/cs472/lab2/about.html)
+- w1d2recipe : [Recipe](https://birhanegg.github.io/cs472/w1d2recipe/index.html)
+
+
 
 <br><br><hr> Qoutes of the day: 
 
