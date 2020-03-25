@@ -2,7 +2,7 @@
 ### Lab Assignments
 
 - Lab-1 : [Personal web Page](https://birhanegg.github.io/cs472/lab1/)
-- Lab-2 : [About Page](https://birhanegg.github.io/cs472/lab2/)
+- Lab-2 : [About Page](https://birhanegg.github.io/cs472/lab2/about.html)
 
 <br><br><hr> Qoutes of the day: 
 
