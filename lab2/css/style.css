@@ -1,0 +1,21 @@
+body{
+    background-color:#eddeee;
+}
+
+h1,h2 {
+    color:teal;
+}
+p > strong {
+    color: red;
+}
+
+img{
+    width: 200px;
+    height: 200px;
+}
+
+
+.img2{
+    width: auto;
+    height: auto;
+}
