@@ -1,13 +1,14 @@
 ## Web Application programming (WAP-cs472)
 ### Lab Assignments
 
-- Lab-1 : [Personal web Page](https://birhanegg.github.io/cs472/lab1/)
-- Lab-2 : [About Page](https://birhanegg.github.io/cs472/lab2/about.html)
-- w1d2recipe : [Recipe](https://birhanegg.github.io/cs472/w1d2recipe/index.html) 
-- w1d3b : [w1d3b](https://birhanegg.github.io/cs472/w1d3b/tmnt.html)
+- Lab-1 : --------> [Personal web Page](https://birhanegg.github.io/cs472/lab1/)
+- Lab-2 :  ---------> [About Page](https://birhanegg.github.io/cs472/lab2/about.html)
+- w1d2recipe :---> [Recipe](https://birhanegg.github.io/cs472/w1d2recipe/index.html) 
+- w1d3b :   -------> [Movie Review](https://birhanegg.github.io/cs472/w1d3b/tmnt.html)
 
 
-<br><br><hr> Qoutes of the day: 
+<br><hr> 
+###  Qoutes of the day: 
 
 > "Life finds its purpose and fulfillment in the expansion of happiness.  " [Maharishi Mahesh Yogi]
 
@@ -19,5 +20,5 @@
 
 
 
-<br><hr><br>
+<br><br><hr>
 By Birhane G. Gebre: &copy;2020
