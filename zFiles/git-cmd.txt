@@ -1,0 +1,26 @@
+
+git config --global alias.cdd'cd C:/wamp64/www/wap'
+
+alias cdd="cd C:/wamp64/www/wap"   //cd 
+alias cc="git add . && git commit -m "$*""
+
+alias ss="git status"
+alias pp="git push"
+
+https://bitsofco.de/git-aliases-for-lazy-developers/
+
+1. .gitignore
+	git add .gitignore  //updating, note the .dot
+	git commit -m "clean files"
+	git push
+2. git rm 
+	//If you want to remove the file from the Git repository and the filesystem, use:
+	git rm file1.txt
+	git commit -m "remove file1.txt"
+	
+	//But if you want to remove the file only from the Git repository and not remove it from the filesystem, use:
+	git rm --cached file1.txt
+	git commit -m "remove file1.txt"
+	git push origin branch_name  
+	
+3. git pull
