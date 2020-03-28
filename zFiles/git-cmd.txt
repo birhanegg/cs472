@@ -6,6 +6,7 @@ alias cc="git add . && git commit -m "$*""
 
 alias ss="git status"
 alias pp="git push"
+git log -3
 
 https://bitsofco.de/git-aliases-for-lazy-developers/
 
@@ -24,3 +25,5 @@ https://bitsofco.de/git-aliases-for-lazy-developers/
 	git push origin branch_name  
 	
 3. git pull
+4. alias
+	C:\Program Files\Git\etc\profile.d

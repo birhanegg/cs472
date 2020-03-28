@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>w1d4-HTML-Form</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+    <div class="jumbotron text-center">
+        <h1>HTML forms (Responsive) </h1>
+        <p>Lab : w1d4 </p>
+    </div>
+
+    <div class="container">
+        <p>Tab1 : webform1 </p>
+        <p>Tab2 : webform2 </p>
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" data-toggle="tab" href="#webform1">webform1</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#webform2">webform2</a>
+            </li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div id="webform1" class="container tab-pane active"><br>
+                <form action="">
+                    <h3>webform1</h3>
+                    <div class="form-group">
+                        <label for="email">Email Address </label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+                        <p>We'll never share your Email with anyone else ... </p>
+                    </div>
+                    <div class="form-group">
+                        <label for="pwd">Password:</label>
+                        <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
+                    </div>
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" type="checkbox" name="remember"> Check me out
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+            <div id="webform2" class="container tab-pane fade">
+
+                <div class="raw">
+                    <div class="col-sm-4"> 
+                        asfsdf
+                    </div>
+                    <div class="col-sm-4"> 
+                        asfsdf
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    </div>
+
+</body>
+</html>
