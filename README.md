@@ -5,7 +5,7 @@
 - Lab-2 :  ---------> [About Page](https://birhanegg.github.io/cs472/lab2/about.html)
 - w1d2recipe :---> [Recipe](https://birhanegg.github.io/cs472/w1d2recipe/index.html) 
 - w1d3b :   -------> [Movie Review](https://birhanegg.github.io/cs472/w1d3b/tmnt.html)
-
+- w1d4 :   -------> [HTML Form](https://birhanegg.github.io/cs472/w1d4/index.html)
 
 <br><hr> 
 ###  Qoutes of the day: 
