@@ -54,17 +54,18 @@
         <!-- Tab panes -->
         <div class="tab-content">
             <div id="webform1" class="container tab-pane active"><br>
-                <form action="#">
+                <form action="#" name="webform1" id="webform1">
                     <div class="form-group">
-                        <label for="Email">Email Address</label>
-                        <input type="email" placeholder="Enter email" id="Email" class="form-control">
+                        <label for="email">Email Address</label>
+                        <input type="email" placeholder="Enter email" id="email" class="form-control">
                         <small id="EmailInfo" class="form-text text-muted">We'll never share your email with anyone
                             else.</small>
                     </div>
 
                     <div class="form-group">
                         <label for="password">Password</label>
-                        <input type="password" id="password" placeholder="Password" class="form-control" minlength="10" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{10}" title="Hint:atleast 1 captial, 1 small letter and one number, total 10 characters ">
+                        <input type="password" id="password" placeholder="Password" class="form-control" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{10,}" minlength="10" title="Hint:atleast 1 captial, 1 small letter and one number, total atleast 10 characters ">
+
                     </div>
 
                     <div class="form-group">
@@ -93,8 +94,8 @@
                     <div class="col-sm-6">
                         <form action="#">
                             <div class="form-group">
-                                <label for="prodname">Product Number</label>
-                                <input type="text" id="prodname" class="form-control">
+                                <label for="productNumber">Product Number</label>
+                                <input type="text" id="productNumber" class="form-control">
                             </div>
 
                             <div class="form-group">
@@ -116,8 +117,8 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="Supplier">Supplier:</label>
-                                <select name="sup" id="Supplier" class="form-control">
+                                <label for="supplier">Supplier:</label>
+                                <select name="sup" id="supplier" class="form-control">
                                     <option value="Select a Supplier" selected>Select a supplier</option>
                                     <option value="1">supplier 1</option>
                                     <option value="2">supplier 2</option>
@@ -136,7 +137,7 @@
                             <div id="buttonswf2">
                                 <input type="reset" value="Reset" id="reset" class="btn btn-outline-dark">
                                 <input type="button" value="Cancel" id="cancel" class="btn btn-outline-warning">
-                                <input type="submit" name="Add" id="addProduct" value="Add Product" class="btn btn-outline-primary">
+                                <input type="submit" name="Add" id="addProduct" value="Add Product" class="btn btn-outline-primary" onclick="logValues()">
                             </div>
                         </form>
                     </div>
@@ -153,6 +154,27 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <script>
+        //webform1
+        var form = document.querySelector("#webform1");
+        form.addEventListener("submit", function(event) {
+            console.log(document.getElementById("email").value);
+            console.log(document.getElementById("password").value);
+            console.log(document.getElementById("url").value);
+            event.preventDefault();
+        });
+        //webform2
+        var form = document.querySelector("#webform2");
+        form.addEventListener("submit", function(event) {
+            console.log(document.getElementById("productNumber").value);
+            console.log(document.getElementById("productName").value);
+            console.log(document.getElementById("unitPrice").value);
+            console.log(document.getElementById("supplier").value);
+            console.log(document.getElementById("supplyDate").value);
+            event.preventDefault();
+        });
+    </script>
 </body>
 
 </html>

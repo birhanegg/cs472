@@ -1,4 +1,6 @@
 zFiles/
 docs/
+*.docx
+*.doc*
 *.log
 *~

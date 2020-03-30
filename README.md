@@ -1,11 +1,13 @@
 ## Web Application programming (WAP-cs472)
 ### Lab Assignments
 
-- Lab-1 : --------> [Personal web Page](https://birhanegg.github.io/cs472/lab1/)
-- Lab-2 :  ---------> [About Page](https://birhanegg.github.io/cs472/lab2/about.html)
-- w1d2recipe :---> [Recipe](https://birhanegg.github.io/cs472/w1d2recipe/index.html) 
-- w1d3b :   -------> [Movie Review](https://birhanegg.github.io/cs472/w1d3b/tmnt.html)
+- w1d1 : -------> [Personal web Page](https://birhanegg.github.io/cs472/lab1/)
+- w1d2 :  -------> [About Page](https://birhanegg.github.io/cs472/lab2/about.html)
+- w1d2a : ------> [Recipe](https://birhanegg.github.io/cs472/w1d2recipe/index.html) 
+- w1d3b :   ------> [Movie Review](https://birhanegg.github.io/cs472/w1d3b/tmnt.html)
 - w1d4 :   -------> [HTML Form](https://birhanegg.github.io/cs472/w1d4/index.html)
+- w1d5 :   -------> [Decorate - Working with the DOM](https://birhanegg.github.io/cs472/w1d4/index.html)
+- w1d6 :   -------> [Intro to Javascript - Practice coding Exercise Problems](https://birhanegg.github.io/cs472/w1d4/index.html)
 
 <br><hr> 
 ###  Qoutes of the day: 

@@ -1,4 +1,9 @@
 "use strict";
+//generic logger 
+const log = (...args) => {
+    return console.log(args);
+}
+
 //question-1
 function max(num1, num2) {
     if (num1 > num2)
@@ -7,30 +12,21 @@ function max(num1, num2) {
         return num2;
 }
 
-//console.log(max(5, 4));
-//console.log(max(10, 20));
+//console.log("Question-1 : " +max(5, 4));
+//console.log("Question-1 : " +max(10, 20));
 
 //question-2
-function maxOfThree(num1, num2, num3) {
-    if (num1 > num2) {
-        if (num1 > num3)
-            return num1;
-        else {
-            if (num2 > num3)
-                return num2; //?
-            else
-                return num3;
-        }
-    } else {
-        if (num2 > num3)
-            return num2;
-        else
-            return num3;
-    }
+function maxOfThree(n1, n2, n3) {
+    if (n1 > n2 && n1 > n3)
+        return n1;
+    else if (n2 > n1 && n2 > n3)
+        return n2;
+    else
+        return n3;
 }
 
-//console.log(maxOfThree(5, 7, 4));
-//console.log(maxOfThree(10, 5, 20));
+//console.log("Question-2: " +maxOfThree(5, 7, 4));
+//console.log("Question-2: " +maxOfThree(10, 5, 20));
 
 //question-3
 function isVowel(c) {
@@ -98,7 +94,7 @@ function findLongestWord(words) {
     return longest;
 }
 
-console.log(findLongestWord(["hani", "welela", "Birhane", "kalu"]))
+console.log("Question-6 : " + findLongestWord(["hani", "welela", "Birhane", "kalu"]))
 
 
 //question-7
@@ -112,49 +108,90 @@ function filterLongWords(words, len) {
     return filter;
 }
 
-console.log(filterLongWords(["hani", "welela", "Birhane", "kalu"], 4))
-
+console.log("Question-7: " + filterLongWords(["hani", "welela", "Birhane", "kalu"], 4))
 
 
 //question-8
 function computeSumOfSquares(numbers) {
-    return numbers.map(function(n) { return Math.pow(n, 2); }).reduce(function(sum, n) { return sum + n; });
+    return numbers.map((n) => Math.pow(n, 2))
+        .reduce((sum, n) => sum + n);
 }
 
-console.log(computeSumOfSquares([1, 2, 3]));
+log("Question-8 : " + computeSumOfSquares([1, 2, 3]));
 
 
 //question-9
 function printOddNumbersOnly(numbers) {
-    return numbers.map(function(n) { return Math.pow(n, 2); }).reduce(function(sum, n) { return sum + n; });
+    var odds = [];
+    for (let i = 0; i < numbers.length; i++) {
+        if (numbers[i] % 2 == 1)
+            odds.push(numbers[i]);
+    }
+    return odds;
 }
 
+log("Question-9 : " + printOddNumbersOnly([1, 2, 3, 4, 5, 6])); // [1, 3, 5]
 
-//15
-
-
-function display_ct() {
-    var x = new Date()
-    var x1 = x.toUTCString(); // changing the display to UTC string
-    document.getElementById('ct').innerHTML = x1;
-    tt = display_c();
+//question-10
+function computeSumOfSquaresOfEvensOnly(numbers) {
+    var evensSquare = [];
+    for (let i = 0; i < numbers.length; i++) {
+        if (numbers[i] % 2 == 0)
+            evensSquare.push(numbers[i] * numbers[i]);
+    }
+    return evensSquare.reduce((x, y) => x + y, 0);
 }
 
-function display_ct() {
-    var x = new Date()
-    var x1 = x.getMonth() + 1 + "/" + x.getDate() + "/" + x.getYear();
-    x1 = x1 + " - " + x.getHours() + ":" + x.getMinutes() + ":" + x.getSeconds();
-    document.getElementById('ct').innerHTML = x1;
-    display_c();
+console.log("Question-10: " + computeSumOfSquaresOfEvensOnly([1, 2, 3, 4, 5])); //20
+
+//question-11
+function sum(numbers) {
+    return numbers.reduce((x, y) => x + y, 0);
 }
 
-function display_c() {
-    var refresh = 1000; // Refresh rate in milli seconds
-    mytime = setTimeout('display_ct()', refresh)
+function multiply(numbers) {
+    return numbers.reduce((x, y) => x * y, 1);
 }
 
-function display_ct() {
-    var x = new Date()
-    document.getElementById('ct').innerHTML = x;
-    display_c();
+console.log(sum([1, 2, 3, 4])); //10
+console.log(multiply([1, 2, 3, 4])); //24
+
+
+//question-12
+function findSecondBiggest(numbers) {
+    var max1 = numbers[0];
+    var max2 = -Infinity;
+    for (var i = 0; i < numbers.length; i++) {
+        if (numbers[i] > max1) {
+            max2 = max1;
+            max1 = numbers[i];
+        } else if (numbers[i] > max2 && numbers[i] !== max1) {
+            max2 = numbers[i];
+        }
+    }
+    return max2;
 }
+console.log("Question-12 : " + findSecondBiggest([19, 9, 11, 0, 12])); //12
+
+
+//question-13
+function printFibo(n, a, b) {
+    var i;
+    var fib = []; // Initialize array!
+
+    fib[0] = a;
+    fib[1] = b;
+    for (i = 2; i < n; i++) {
+        fib[i] = fib[i - 2] + fib[i - 1];
+    }
+    return fib;
+}
+
+console.log("Question-13:" + printFibo(7, 0, 1)); //) [0, 1, 1, 2, 3, 5, 8]
+
+//question-14
+//done in separate file 
+log("---------here ---------");
+
+//question-15
+//done in separate file
