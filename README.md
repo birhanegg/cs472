@@ -9,6 +9,7 @@
 - w1d5 :   -------> [Intro to Javascript - Practice coding](https://birhanegg.github.io/cs472/w1d5/index.html)
 - w1d6 :   -------> [Decorate - Working with the DOM](https://birhanegg.github.io/cs472/w1d6/index.html)
 
+
 <br><hr> 
 ###  Qoutes of the day: 
 
