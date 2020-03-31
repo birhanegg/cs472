@@ -3,15 +3,15 @@ window.onload = function() {
     "use strict";
 
     var bigBtn = document.getElementById("docBig");
-    bigBtn.onclick = function() {
+    bigBtn.onclick = function() { //anonymouse function 
         setInterval(docorateBig, 200);
     };
 
     function docorateBig() {
-        var textArea = document.getElementById("orginalText"),
-            style = window.getComputedStyle(textArea),
-            fontSize = style.getPropertyValue('font-size');
-        var fontBigger = parseInt(fontSize) + 2;
+        var textArea = document.getElementById("orginalText");
+        var style = window.getComputedStyle(textArea);
+        var fontSize = style.getPropertyValue('font-size');
+        var fontBigger = parseInt(fontSize) + 2; //updating font periodically 
         document.getElementById("orginalText").style.fontSize = fontBigger.toString() + "px";
     }
 
