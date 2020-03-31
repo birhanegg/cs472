@@ -113,8 +113,7 @@ console.log("Question-7: " + filterLongWords(["hani", "welela", "Birhane", "kalu
 
 //question-8
 function computeSumOfSquares(numbers) {
-    return numbers.map((n) => Math.pow(n, 2))
-        .reduce((sum, n) => sum + n);
+    return numbers.map((n) => n * n).reduce((sum, n) => sum + n);
 }
 
 log("Question-8 : " + computeSumOfSquares([1, 2, 3]));
@@ -130,16 +129,13 @@ function printOddNumbersOnly(numbers) {
     return odds;
 }
 
+log("###################");
+
 log("Question-9 : " + printOddNumbersOnly([1, 2, 3, 4, 5, 6])); // [1, 3, 5]
 
 //question-10
 function computeSumOfSquaresOfEvensOnly(numbers) {
-    var evensSquare = [];
-    for (let i = 0; i < numbers.length; i++) {
-        if (numbers[i] % 2 == 0)
-            evensSquare.push(numbers[i] * numbers[i]);
-    }
-    return evensSquare.reduce((x, y) => x + y, 0);
+    return numbers.filter(n => n % 2 === 0).map(n => n * n).reduce((sum, n) => sum + n);
 }
 
 console.log("Question-10: " + computeSumOfSquaresOfEvensOnly([1, 2, 3, 4, 5])); //20
@@ -191,7 +187,6 @@ console.log("Question-13:" + printFibo(7, 0, 1)); //) [0, 1, 1, 2, 3, 5, 8]
 
 //question-14
 //done in separate file 
-log("---------here ---------");
 
 //question-15
 //done in separate file

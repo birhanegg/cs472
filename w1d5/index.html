@@ -239,8 +239,8 @@
             <div class="col-md-5">
                 <pre><code class="javascript">
                     function computeSumOfSquares(numbers) {
-                        return numbers.map(function(n) { return Math.pow(n, 2); })
-                                     .reduce(function(sum, n) { return sum + n; });
+                        return numbers.map((n) => n * n)
+                                      .reduce((sum, n) => sum + n);
                     }
                   </code></pre>
             </div>
@@ -287,12 +287,9 @@
             <div class="col-md-5">
                 <pre><code class="javascript">
                     function computeSumOfSquaresOfEvensOnly(numbers) {
-                        var evensSquare = [];
-                        for (let i = 0; i < numbers.length; i++) {
-                            if (numbers[i] % 2 == 0)
-                                evensSquare.push(numbers[i] * numbers[i]);
-                        }
-                        return evensSquare.reduce((x, y) => x + y, 0);
+                        return numbers.filter(n => n % 2 === 0)
+                                      .map(n => n * n)
+                                      .reduce((sum, n) => sum + n);
                     }
                 </code></pre>
             </div>
@@ -355,9 +352,6 @@
             </code></pre>
             </div>
             <div class="col-md-2">
-                <p>printFibo(7, 0, 1));</p>
-                <p> output : [0, 1, 1, 2, 3, 5, 8] </p>
-                <hr>
                 <p>findSecondBiggest(1,2,3,4,5]);</p>
                 <p> output : 4 </p>
             </div>
