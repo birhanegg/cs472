@@ -8,6 +8,7 @@
 - w1d4 :   -------> [HTML Form](https://birhanegg.github.io/cs472/w1d4/index.html)
 - w1d5 :   -------> [Intro to Javascript - Practice coding](https://birhanegg.github.io/cs472/w1d5/index.html)
 - w1d6 :   -------> [Decorate - Working with the DOM](https://birhanegg.github.io/cs472/w1d6/index.html)
+- w2d1 :   -------> [JS Closre](https://birhanegg.github.io/cs472/w2d1/index.html)
 
 
 <br><hr> 
