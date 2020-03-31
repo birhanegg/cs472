@@ -4,3 +4,6 @@ docs/
 *.doc*
 *.log
 *~
+zTmp.txt
+zNext.txt
+zHTML.html
