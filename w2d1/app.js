@@ -21,3 +21,26 @@ function test() {
 }
 
 test();
+
+//------------q4
+var x = 9;
+
+function func() {
+    return x * x;
+}
+console.log(func())
+x = 5;
+console.log(func())
+
+
+//-----------------5
+
+var foo = 1;
+
+function bar() {
+    if (!foo) {
+        var foo = 10;
+    }
+    alert(foo)
+}
+bar();

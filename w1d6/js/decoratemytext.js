@@ -3,7 +3,9 @@ window.onload = function() {
     "use strict";
 
     var bigBtn = document.getElementById("docBig");
-    bigBtn.onclick = bigApply;
+    bigBtn.onclick = function() {
+        setInterval(docorateBig, 200);
+    };
 
     function docorateBig() {
         var textArea = document.getElementById("orginalText"),
@@ -13,9 +15,7 @@ window.onload = function() {
         document.getElementById("orginalText").style.fontSize = fontBigger.toString() + "px";
     }
 
-    function bigApply() {
-        setInterval(docorateBig, 200);
-    }
+
     $(document).ready(function() {
         $('input[type="checkbox"]').click(function() {
             if ($(this).prop("checked") === true) {
