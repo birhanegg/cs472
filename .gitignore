@@ -4,6 +4,7 @@ docs/
 *.doc*
 *.log
 *~
+zTest/
 zTmp.txt
 zNext.txt
 zHTML.html
