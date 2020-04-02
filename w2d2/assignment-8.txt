@@ -1,11 +1,8 @@
 /* 
-    author : Birhane Gebre
+	authotr : Birhane 
 */
+
 "use strict";
-//generic logger 
-const log = (...args) => {
-    return console.log(args);
-}
 
 // =============  Question-6 ==========
 var count = (function() {
@@ -24,36 +21,28 @@ console.log(count.add());
 console.log(count.reset());
 
 // =============  Question-7 ==========
-// add()  has  "counter" free variable 
+// add() function  has  "counter" free variable 
 // free variable is a  variable used in a function that are not local variables nor parameters of that function
 
 
 // =============  Question-8 ==========
-var count = (function() {
-    var counter = 0;
-    return {
-        add: function() {
-            return counter += 1;
-        },
-        reset: function() {
-            return counter = 0;
-        },
-        make_adder: function(inc) {
-            return function() { return counter += inc; };
-        }
+const make_adder = function(inc) {
+    let counter = 0;
+    return function() {
+        counter += inc;
+        console.log(counter);
     }
-})();
+}
 
-var add5 = count.make_adder(5);
-console.log(count.make_adder(5)());
-console.log(add5());
-console.log(add5());
+const add5 = make_adder(5);
+add5(); //5
+add5(); //10
+add5(); //15
 
-console.log(count.reset());
-var add7 = count.make_adder(7);
-console.log(add7());
-console.log(add7());
-console.log(add7());
+const add7 = make_adder(7);
+add7(); //7
+add7(); // 14
+add7(); //21
 
 // =============  Question-9 ==========
 //  Use Object Literalsor  or Module Patterns
