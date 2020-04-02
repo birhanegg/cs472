@@ -11,8 +11,8 @@
 - w2d1 :   -------> [JS Closre](https://birhanegg.github.io/cs472/w2d1/index.html)
 - w2d2 :   -------> [Objects, Modules and Inheritance](https://birhanegg.github.io/cs472/w2d2/index.html)
 - w2d3 :   -------> [Inheritance, JQuery and DOM](https://birhanegg.github.io/cs472/w2d3/index.html)
-			
-<br><hr> 
+
+<br><br><hr>
 ###  Qoutes of the day: 
 
 > "Life finds its purpose and fulfillment in the expansion of happiness.  " [Maharishi Mahesh Yogi]

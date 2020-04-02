@@ -13,6 +13,21 @@
     <h1> w2d3</h1>
     <hr>
 
+    <button id="clickme">Color Me</button>
+    <script>
+        window.onload = function() {
+            document.getElementById("clickme").onclick = function() { // .onclick = changeColor;
+                const clickMe = document.getElementById("clickme");
+                clickMe.style.color = "red";
+            }
+        }
+
+        function changeColor() {
+            const clickMe = document.getElementById("clickme");
+            clickMe.style.color = "red";
+        }
+    </script>
+
     <script src="js/app.js"></script>
 </body>
 
