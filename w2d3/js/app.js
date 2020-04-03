@@ -67,28 +67,22 @@ window.onload = function() {
     //Q4 solution shown below and also in github 
     //https://birhanegg.github.io/cs472/w1d4/index.html  //link
 
-
-    /*
-    <script>
-        $(document).ready(function() {
-            //webform1
-            $("#webform1").submit(function(event) {
-                console.log(document.getElementById("email").value);
-                console.log(document.getElementById("password").value);
-                console.log(document.getElementById("url").value);
-                event.preventDefault();
-            });
-            //webform2
-            $("#webform2").submit(function(event) {
-                console.log(document.getElementById("productNumber").value);
-                console.log(document.getElementById("productName").value);
-                console.log(document.getElementById("unitPrice").value);
-                console.log(document.getElementById("supplier").value);
-                console.log(document.getElementById("supplyDate").value);
-                event.preventDefault();
-            });
-        });
-    </script>
-    */
+    //webform1
+    $("#webform1").submit(function(event) {
+        console.log($("#email").val());
+        console.log($("#password").val());
+        console.log($("#url").val());
+        event.preventDefault();
+    });
+    //webform2
+    $("#webform2").submit(function(event) {
+        console.log($("#productNumber").val());
+        console.log($("#url").val());
+        console.log($("#productName").val());
+        console.log($("#unitPrice").val());
+        console.log($("#supplier").val());
+        console.log($("#supplyDate").val());
+        event.preventDefault();
+    });
 
 };
