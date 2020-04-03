@@ -1,12 +1,14 @@
 /**
- * app.js for lab w2d4
+ * app.js for lab w2d3
  * 
  * @author Birhane Gebre
  * @since 2020-04-02
  */
 
 
-//=======  Question-1 ==========
+//---------------------Question-1 ---------------------------
+
+
 window.onload = function() {
     "use strict";
 
@@ -29,7 +31,7 @@ window.onload = function() {
     console.log(`\"${john.name} was born in  ${john.dateOfBirth}\"`);
 
 
-    //=======  Question-2 ==========
+    //---------------------Question-2 ---------------------------
 
     let Employee = Object.create(person);
     Employee = {
@@ -45,7 +47,8 @@ window.onload = function() {
     Employee.doJob("Programmer");
 
 
-    //=======  Question-3 ==========
+
+    //---------------------Question-3 ---------------------------
 
     function Person(name, dateOfBirth) {
         this.name = name;
@@ -57,9 +60,14 @@ window.onload = function() {
     let peter = new Person("Peter", "November 10, 1985");
     console.log(peter.toString());
 
-    //=======  Question-4 ==========
+
+
+    //---------------------Question-4 ---------------------------
+
     //Q4 solution shown below and also in github 
     //https://birhanegg.github.io/cs472/w1d4/index.html  //link
+
+
     /*
     <script>
         $(document).ready(function() {
