@@ -61,7 +61,7 @@ console.log(add7());
 
 // =============  Question-10 ==========
 
-var Employee =
+var employee =
     (function() {
         //fields
         let name;
@@ -91,49 +91,17 @@ var Employee =
 
     })();
 
-Employee.setSalary(90000);
-console.log(Employee.getSalary()); //90000
+employee.setSalary(90000);
+console.log(employee.getSalary()); //90000
 
 // =============  Question-11 ==========
 
-Employee.address = "";
-Employee.setAddress = function(newAddress) { address = newAddress; };
-Employee.getAddress = function() { return address; };
-
-//ingergrating with Q10
-var Employee =
-    (function() {
-        //fields
-        let name;
-        let age;
-        let salary;
-        let address;
-        //getter & setter methods
-        let setAge = function(newAge) { this.age = newAge };
-        let setSalary = function(newSalary) { this.salary = newSalary };
-        let setName = function(newName) { this.name = newName };
-        let getAge = function() { return this.age; };
-        let getSalary = function() { return this.salary; };
-        let getName = function() { return this.name; };
-
-        //other methods
-        let increaseSalary = function(percentage) {
-            setSalary(getSalary() + (getSalary() * percentage))
-        };
-        let incrementAge = function() { setAge(getAge() + 1) };
-        let setAddress = function(newAddress) { address = newAddress; };
-        let getAddress = function() { return address; };
-        return {
-            setName: setName,
-            setAge: setAge,
-            setSalary: setSalary,
-            increaseSalary: increaseSalary,
-            incrementAge: incrementAge,
-            getAddress: getAddress,
-            setAddress: setAddress
-        };
-
-    })();
-
-Employee.setAddress("MIU");
-console.log(Employee.getAddress()); //MIU
+employee.address = "somewhere "
+employee.setAddress = function(addr) {
+    return this.address = addr;
+}
+employee.getAddress = function() {
+    return this.address;
+}
+employee.setAddress("MIU, fairfield");
+console.log(employee.getAddress());

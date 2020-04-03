@@ -137,7 +137,7 @@
                             <div id="buttonswf2">
                                 <input type="reset" value="Reset" id="reset" class="btn btn-outline-dark">
                                 <input type="button" value="Cancel" id="cancel" class="btn btn-outline-warning">
-                                <input type="submit" name="Add" id="addProduct" value="Add Product" class="btn btn-outline-primary" onclick="logValues()">
+                                <input type="submit" name="Add" id="addProduct" value="Add Product" class="btn btn-outline-primary">
                             </div>
                         </form>
                     </div>
@@ -154,27 +154,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-
-    <script>
-        //webform1
-        var form = document.querySelector("#webform1");
-        form.addEventListener("submit", function(event) {
-            console.log(document.getElementById("email").value);
-            console.log(document.getElementById("password").value);
-            console.log(document.getElementById("url").value);
-            event.preventDefault();
-        });
-        //webform2
-        var form = document.querySelector("#webform2");
-        form.addEventListener("submit", function(event) {
-            console.log(document.getElementById("productNumber").value);
-            console.log(document.getElementById("productName").value);
-            console.log(document.getElementById("unitPrice").value);
-            console.log(document.getElementById("supplier").value);
-            console.log(document.getElementById("supplyDate").value);
-            event.preventDefault();
-        });
-    </script>
+    <script src="js/app.js"></script>
 </body>
 
 </html>

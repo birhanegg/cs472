@@ -1,0 +1,44 @@
+<html>
+
+<head>
+    <title> PigLatin Converter </title>
+    <script type="text/javascript">
+        function LatinWord(word) {
+            var index;
+            index = word.search(/[aeiouAEIOU]/);
+            if (index <= 0) {
+                return word + "way";
+            } else {
+                return word.substring(index, word.length) + word.substring(0, index) + "ay";
+            }
+        }
+
+        function LatinPhrase(phrase) {
+            var str = '';
+            var tarr = phrase.split(' ');
+            for (var i = 0; i < tarr.length; ++i) {
+                str += LatinWord(tarr[i]) + ' ';
+            }
+            return str;
+        }
+    </script>
+</head>
+
+<body>
+    <form name="PigForm" onsubmit="return false">
+        Enter a word:<br /> <input type="text" name="word" size=40 value="" />
+        <p />
+        <input type="button" value="Translate to Pig Latin" onClick="document.PigForm.pigWord.value=LatinWord(document.PigForm.word.value);" />
+        <p /> In Pig Latin:<br /> <input type="text" name="pigWord" size=40 value="" />
+        <p />
+
+        <hr>
+        <p /> Enter a phrase/sentence:<br /> <input type="text" name="phrase" size=40 value="" />
+        <p />
+        <input type="button" value="Translate to Pig Latin" onClick="document.PigForm.pigPhrase.value=LatinPhrase(document.PigForm.phrase.value);" />
+        <p /> In Pig Latin:<br /> <input type="text" name="pigPhrase" size=40 value="" />
+
+    </form>
+</body>
+
+</html>
