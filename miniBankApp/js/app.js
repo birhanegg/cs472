@@ -15,13 +15,19 @@ $(document).ready(function() {
         let customerName = $("#customerName").val();
         let typeOfAccount = $("#typeOfAccount").val();
 
+
+        $("#customerAccountList").append($("<li>", {
+            "class": "list-group-item active",
+            "text": "List of Customer Accounts"
+        }));
+
         $("#customerAccountList").append($("<li>", {
             "class": "list-group-item",
             "text": `${accountNumber} | ${customerName} | ${typeOfAccount}`
         }));
 
-        document.getElementById("accountNumber").value = "";
-        document.getElementById("customerName").value = "";
-        document.getElementById("typeOfAccount").value = "";
+        $("#accountNumber").empty();
+        $("#customerName").empty();
+        $("#typeOfAccount").empty();
     });
 });
