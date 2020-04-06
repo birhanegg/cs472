@@ -33,7 +33,7 @@ $(document).ready(function() {
 
 
         console.log(tr);
-        $('#listOfPeople').append(tr);
+        $('#mytable').append(tr);
 
         $("#fullName").empty();
         $("#citizenID").empty();
