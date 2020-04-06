@@ -2,26 +2,23 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
     <title>The South West - Regional Census</title>
-
-    <link rel="icon" href="images/favicon.ico" type="image/ico">
-
-    <link rel="stylesheet" href="css/styles.css">
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Mini census APP, client side UI development">
+    <meta name="author" content="Birhane G. Gebre">
+    <link href="images/favicon.png" type="images/ico" rel="Icon" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link href="css/styles.css" type="text/css" rel="stylesheet">
 </head>
+
 
 <body>
     <header>
         <!-- navigation -->
         <!-- <nav class="navbar navbar-expand-sm bg-light navbar-light"> -->
         <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-            <a class="navbar-brand" href="#">CS472 ::: MiniBankingAPP</a>
+            <a class="navbar-brand" href="#">The South West- Regional Census</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -39,8 +36,8 @@
                     </li>
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+                    <span id="spanDate"></span>
+                    </span>
                 </form>
             </div>
         </nav>
@@ -49,7 +46,7 @@
     <div id="mainContainer" class="container">
         <h1>Census Form</h1>
 
-        <form id="senusesform">
+        <form id="cenusesform">
             <div class="form-group">
                 <label for="fullName">*Full Name</label>
                 <input name="fullName" type="text" id="fullName" placeholder="Enter Your Full Name" class="form-control" required>
@@ -61,18 +58,18 @@
                     <div class="form-group">
                         <label for="citizenID">*Citizen ID:</label>
                         <input name="citizenID" type="number" id="citizenID" placeholder="XXXXXXXXXX" class="form-control" required minlength="10" pattern="^\d{10}$">
-                        <small class="form-text text-muted">Enter your Full Name as printed on your ID</small>
+                        <small class="form-text text-muted">Enter your ID</small>
                     </div>
                 </div>
-
                 <div class="form-group">
                     <label for="state">*State:</label>
-                    <select name="state" id="state" class="form-control">
-                    <option value="State not Selected" selected>Select...</option>
-                    <option value="New Mexico">New Mexico</option>
-                    <option value="Arizona">AZ</option>
-                    <option value="Texas">TX</option>
-                </select>
+
+                    <select id="state" name="state" class=' form-control ' required>                                
+                        <option value="" selected>...choose...</option>
+                        <option value="New Mexico">New Mexico</option>
+                        <option value="Arizona">AZ</option>
+                        <option value="Texas">TX</option>
+                    </select>
                     <small class="form-text text-muted">Select Your State of Residence</small>
                 </div>
             </div>
@@ -90,9 +87,9 @@
                     <div class="form-group">
                         <label>*Senior Citizen? </label>
                         <br>
-                        <input type="radio" id="yesSenior" name="senior" value="Yes">
+                        <input type="radio" id="yesSenior" name="senior" value="Yes" required>
                         <label for="yesSenior">Yes </label>
-                        <input type="radio" id="noSenior" name="senior" value="No">
+                        <input type="radio" id="noSenior" name="senior" value="No" required>
                         <label for="yesSenior">No </label>
                     </div>
                 </div>
@@ -110,7 +107,7 @@
 
         <br>
 
-        <table class="table">
+        <table class="table" name="mytable" id="mytable">
             <thead>
                 <tr>
                     <th scope="col">Citizen ID</th>

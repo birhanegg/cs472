@@ -8,28 +8,37 @@
 $(document).ready(function() {
 
     "use strict";
-
-    $("#senusesform").submit(function(event) {
+    document.getElementById("spanDate").innerHTML = new Date();
+    $("#cenusesform").submit(function(event) {
 
         event.preventDefault();
+        console.log("--------asdfsd  sdff");
+        let citizenID = $("#citizenID").val();
+        let fullName = $("#fullName").val();
+        let state = $("#state").val();
+        let accountNo = $("#accountNo").val();
+        let yesSenior = $("input[name='senior']:checked").val();
+        // console.log(citizenID);
+        // console.log(fullName);
+        // //onsole.log("state: " + state);
+        // console.log(accountNo);
+        // console.log(yesSenior);
 
-        let accountNumber = $("#accountNumber").val();
-        let customerName = $("#customerName").val();
-        let typeOfAccount = $("#typeOfAccount").val();
+        let tr = `<tr> 
+        <td>${citizenID} </td>
+        <td>${state} </td>
+        <td>${fullName} </td>
+        <td>${accountNo} </td>
+        <td>${yesSenior} </td></tr> `;
 
 
-        $("#customerAccountList").append($("<li>", {
-            "class": "list-group-item active",
-            "text": "List of Customer Accounts"
-        }));
+        console.log(tr);
+        $('#listOfPeople').append(tr);
 
-        $("#customerAccountList").append($("<li>", {
-            "class": "list-group-item",
-            "text": `${accountNumber} | ${customerName} | ${typeOfAccount}`
-        }));
-
-        $("#accountNumber").empty();
-        $("#customerName").empty();
-        $("#typeOfAccount").empty();
+        $("#fullName").empty();
+        $("#citizenID").empty();
+        $("#accountNo").empty();
+        $("#senior").empty();
     });
+
 });
