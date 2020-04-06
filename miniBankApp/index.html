@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>w1d4-HTML-Form</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Mini Banking APP, client side UI development">
+    <meta name="author" content="Birhane G. Gebre">
+    <link href="images/favicon.png" type="images/ico" rel="Icon" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link href="css/styles.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <!-- navigation -->
+        <!-- <nav class="navbar navbar-expand-sm bg-light navbar-light"> -->
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+            <a class="navbar-brand" href="#">CS472 ::: MiniBankingAPP</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact-form.html">Contact</a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container ">
+            <div class="row ">
+                <div class="col-md-12 ">
+                    <article>
+                        <h2>Bank Account Form</h2>
+                        <form id="newAccountForm">
+                            <div class="form-group">
+                                <label for="accountNumber">Account Number</label>
+                                <input type="text" required class="form-control" id="accountNumber" aria-describedby="acooutNumberHelp" pattern="01-\d{3}-\d{4}">
+                                <small id="acooutNumberHelp" class="form-text text-muted">Your unique account number.</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="customerName">Customer Name</label>
+                                <input required type="text" class="form-control" id="customerName" aria-describedby="customerNameHelp">
+                            </div>
+                            <div class="form-group">
+                                <label for="typeOfAccount">Type of Account</label>
+                                <select required class="form-control" id="typeOfAccount">
+                                      <option>Checking</option>
+                                      <option>Savings</option>
+                                      <option>Loan</option>
+                                    </select>
+                            </div>
+
+                            <button type="submit" id="createNewAccount" class="btn btn-primary">Create New Account</button>
+
+                            <div class="top-marginer">
+                                <ul id="customerAccountList" class="list-group">
+                                </ul>
+                            </div>
+                        </form>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div>
+            <span style="margin-left: 1em;">&copy; Birhane G. Gebre ::: April 2020</span>
+        </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js "></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js "></script>
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>
