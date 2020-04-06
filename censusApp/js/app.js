@@ -15,7 +15,9 @@ $(document).ready(function() {
 
         let citizenID = $("#citizenID").val();
         let fullName = $("#fullName").val();
+
         let state = $("#state").val();
+        console.log(state);
         let ssn = $("#ssn").val();
         let yesSenior = $("input[name='senior']:checked").val();
         // console.log(citizenID);
