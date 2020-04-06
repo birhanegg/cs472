@@ -9,7 +9,7 @@ $(document).ready(function() {
 
     "use strict";
 
-    $("#newAccountForm").submit(function(event) {
+    $("#senusesform").submit(function(event) {
 
         event.preventDefault();
 
