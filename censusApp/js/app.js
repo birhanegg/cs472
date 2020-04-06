@@ -12,7 +12,7 @@ $(document).ready(function() {
     $("#cenusesform").submit(function(event) {
 
         event.preventDefault();
-        console.log("--------asdfsd  sdff");
+
         let citizenID = $("#citizenID").val();
         let fullName = $("#fullName").val();
         let state = $("#state").val();
@@ -33,13 +33,13 @@ $(document).ready(function() {
         <td>${yesSenior} </td></tr> `;
 
 
-        console.log(tr);
+        //console.log(tr);
         $('#listOfPeople').append(tr);
 
-        $("#fullName").empty();
-        $("#citizenID").empty();
-        $("#ssn").empty();
-        $("#senior").empty();
+        $("#fullName").val('');
+        $("#citizenID").val('');
+        $("#ssn").val('');
+        $("#senior").val('');
     });
 
 });
