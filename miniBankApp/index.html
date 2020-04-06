@@ -50,16 +50,17 @@
                         <form id="newAccountForm">
                             <div class="form-group">
                                 <label for="accountNumber">Account Number</label>
-                                <input type="text" required class="form-control" id="accountNumber" aria-describedby="acooutNumberHelp" pattern="01-\d{3}-\d{4}">
+                                <input type="text" required class="form-control" id="accountNumber" aria-describedby="acooutNumberHelp" placeholder="01-XXX-XXXX" pattern="01-\d{3}-\d{4}">
                                 <small id="acooutNumberHelp" class="form-text text-muted">Your unique account number.</small>
                             </div>
                             <div class="form-group">
                                 <label for="customerName">Customer Name</label>
-                                <input required type="text" class="form-control" id="customerName" aria-describedby="customerNameHelp">
+                                <input required type="text" class="form-control" id="customerName" placeholder="e.g. John B Smith" aria-describedby="customerNameHelp">
                             </div>
                             <div class="form-group">
                                 <label for="typeOfAccount">Type of Account</label>
-                                <select required class="form-control" id="typeOfAccount">
+                                <select id='typeOfAccount' class='form-control' required>                                
+                                      <option value="" selected>...choose...</option>
                                       <option>Checking</option>
                                       <option>Savings</option>
                                       <option>Loan</option>
