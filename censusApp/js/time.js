@@ -1,13 +1,20 @@
+/**
+ * file : time.js 
+ * 
+ * @author Birhane Gebre
+ * @since 2020-04-06
+ */
+
+// day, date and time in cenuses-header 
 var mydate = new Date()
 var year = mydate.getYear()
 
 if (year < 1000)
     year += 1900
-
-var day = mydate.getDay() // Current Day of week - 2
-var month = mydate.getMonth() // Current Month 2
-var daym = mydate.getDate() // Current Date -24
-var h = mydate.getHours(); //Hours
+var day = mydate.getDay();
+var month = mydate.getMonth();
+var daym = mydate.getDate();
+var h = mydate.getHours();
 var m = mydate.getMinutes(); //Minutes
 var s = mydate.getSeconds(); //Seconds
 m = checkTime(m);
@@ -23,9 +30,18 @@ var dayarray = new Array("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday",
 var montharray = new Array("January", "February", "March", "April", "May", "June",
     "July", "August", "September", "October", "November", "December")
 
-document.getElementById('txt').innerHTML = h + ":" + m + ":" + s + " " + dayarray[day] + ", " + montharray[month] + " " + daym + ", " + year;
+setTimeout(function() { startTime() }, 500);
 
+function startTime() {
+    var today = new Date();
+    var h = today.getHours();
+    var m = today.getMinutes();
+    var s = today.getSeconds();
+    m = checkTime(m);
+    s = checkTime(s);
+    var ampm = h >= 12 ? 'pm' : 'am';
 
-
-var t = setTimeout(function() { startTime() }, 500);
-//This will update time
+    document.getElementById('spanDate').innerHTML =
+        dayarray[day] + ", " + montharray[month] + " " + daym + " " + year + " - " + h + ":" + m + ":" + s + " " + ampm;
+    var t = setTimeout(startTime, 500);
+}

@@ -1,29 +1,20 @@
 ## Web Application programming (WAP-cs472)
 ### Lab Assignments
 
+*   w1d1 - [Create homepage and publish on web server](#)
+*   w1d2 - [About Me](https://birhanegg.github.io/cs472/lab2/about.html)
+*   w1d3a - [Recipe](https://birhanegg.github.io/cs472/w1d2recipe/index.html)
+*   w1d3b - [Movie Review](https://birhanegg.github.io/cs472/w1d3b/tmnt.html)
+*   w1d4 - [HTML Form](https://birhanegg.github.io/cs472/w1d4/index.html)
+*   w1d5 - [Decorate - Working with the DOM](https://birhanegg.github.io/cs472/w1d5/index.html)
+*   w1d6 - [Intro to Javascript - Practice coding Exercise Problems](https://birhanegg.github.io/cs472/w1d6/index.html)
+*   w2d1 - [Javascript closure](https://birhanegg.github.io/cs472/w2d1/index.html)
+*   w2d2 - [Objects, Modules and Inheritance](https://birhanegg.github.io/cs472/w2d2/index.html)
+*   w2d3- [JQuery and DOM](https://birhanegg.github.io/cs472/w2d3/index.html)
 
-<table>
-  <tr>
-    <th>Lab</th>
-    <th>Description</th> 
-  </tr>
-  <tr>
-    <td>Lab-1 </td>
-    <td><a href = "https://birhanegg.github.io/cs472/lab1"> Personal Web Page</a></td>
-  </tr>
-  <tr>
-    <td>Lab-2 </td>
-    <td><a href = "https://birhanegg.github.io/cs472/lab2/about.html"> About Page </a></td>
-  </tr>
-    <tr>
-    <td>w1d3 </td>
-    <td><a href = "https://birhanegg.github.io/cs472/w1d2recipe/index.html"> Recipe</a></td>
-  </tr>
-    <tr>
-    <td>w1d3b </td>
-    <td><a href = "https://birhanegg.github.io/cs472/w1d3b/tmnt.html"> Movie Review</a></td>
-  </tr>
-</table>
+*   midExam- [Cenuses](https://birhanegg.github.io/cs472/censusApp/)
+    > midExam files (html, css & javaScript)](https://github.com/birhanegg/cs472/tree/master/censusApp
+
 
 <br><br><hr> Qoutes of the day: 
 
