@@ -41,39 +41,44 @@ $(document).ready(function() {
 
 });
 
+// day, date and time in cenuses-header 
+var mydate = new Date()
+var year = mydate.getYear()
 
+if (year < 1000)
+    year += 1900
+var day = mydate.getDay();
+var month = mydate.getMonth();
+var daym = mydate.getDate();
+var h = mydate.getHours();
+var m = mydate.getMinutes(); //Minutes
+var s = mydate.getSeconds(); //Seconds
+m = checkTime(m);
+s = checkTime(s);
 
-//moodule patthern 
-function arrayUtils() {
-
-    var multiplesCount = function(arr, base) {
-        const multiples = arr.filter(function(value) {
-            return value % base === 0;
-        })
-        return multiples.length;
-    }
-
-    var reverseInPlace = function(arr) {
-        const newArray = arr.reverse();
-        return newArray;
-    }
-
-
-    return {
-        multipleCount: multiplesCount,
-        reverseInPlace: reverseInPlace
-    }
-}
-const check = new arrayUtils();
-console.log(check.reverseInPlace([1, 2, 3, 4, 5, 6]));
-console.log(check.multipleCount([1, 2, 3, 4, 5, 6], 3));
-
-
-//adding printTheName  function 
-const array = [];
-array.printTheName = function(fullname) {
-    console.log(fullname)
+function checkTime(i) {
+    if (i < 10) { i = "0" + i }; // add zero in front of numbers < 10
+    return i;
 }
 
-array.printTheName("Anna H. Smith");
-array.printTheName("Bob J. Harrison");
+var dayarray = new Array("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday",
+    "Friday", "Saturday")
+var montharray = new Array("January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December")
+
+setTimeout(function() { startTime() }, 500);
+
+function startTime() {
+    var today = new Date();
+    var h = today.getHours();
+    var m = today.getMinutes();
+    var s = today.getSeconds();
+    m = checkTime(m);
+    s = checkTime(s);
+    var ampm = h >= 12 ? 'pm' : 'am';
+
+    document.getElementById('spanDate').innerHTML =
+        dayarray[day] + ", " + montharray[month] + " " + daym + " " + year + " - " + h + ":" + m + ":" + s + " " + ampm;
+    var t = setTimeout(startTime, 500);
+}
+//------------------------------------
