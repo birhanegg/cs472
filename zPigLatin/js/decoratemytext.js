@@ -58,80 +58,33 @@ window.onload = function() {
     );
     // Converting to pig latin
 
-    //     btnConvertTextToPigLatin.addEventListener("click",
-    //         event => {
-    //             const str = document.querySelector("#textAreaText").value;
-    //             var newStrArray = str.split('');
-    //             for (var i = 0; i < newStrArray.length; i++) {
-    //                 var letter = newStrArray[0];
-    //                 if (i === 0) {
-    //                     if (letter === 'a' || letter === 'e' || letter === 'i' || letter === 'o' || letter === 'u') {
-    //                         newStrArray.push('way');
-    //                         break;
-    //                     } else {
-    //                         newStrArray.push(newStrArray.splice(0, 1)[0]);
-    //                     }
-    //                 } else {
-    //                     if (letter === 'a' || letter === 'e' || letter === 'i' || letter === 'o' || letter === 'u') {
-    //                         newStrArray.push('ay');
-    //                         break;
-    //                     } else {
-    //                         newStrArray.push(newStrArray.splice(0, 1)[0]);
-    //                     }
-    //                 }
-    //             }
-    //             newStrArray.join('');
-
-    //             document.querySelector("#textAreaText").value = newStrArray.join('');
-
-    //         }
-    //     );
-
-    // };
-
-
-
-    // Converting to pig latin
-    const btnConvertTextToPigLatin = this.document.querySelector("#btnConvertTextToPigLatin");
     btnConvertTextToPigLatin.addEventListener("click",
         event => {
-            let newText = "";
-            const currentText = document.querySelector("#textAreaText").value;
-            console.log(currentText);
-            const wordsArray = currentText.split(" ");
-            document.querySelector("#textAreaText").value = newText;
+            const str = document.querySelector("#textAreaText").value;
+            var newStrArray = str.split('');
+            for (var i = 0; i < newStrArray.length; i++) {
+                var letter = newStrArray[0];
+                if (i === 0) {
+                    if (letter === 'a' || letter === 'e' || letter === 'i' || letter === 'o' || letter === 'u') {
+                        newStrArray.push('way');
+                        break;
+                    } else {
+                        newStrArray.push(newStrArray.splice(0, 1)[0]);
+                    }
+                } else {
+                    if (letter === 'a' || letter === 'e' || letter === 'i' || letter === 'o' || letter === 'u') {
+                        newStrArray.push('ay');
+                        break;
+                    } else {
+                        newStrArray.push(newStrArray.splice(0, 1)[0]);
+                    }
+                }
+            }
+            newStrArray.join('');
+
+            document.querySelector("#textAreaText").value = newStrArray.join('');
+
         }
     );
 
 };
-
-
-/*
-
-
-function translatePigLatin(str) {
-    var newStrArray = str.split('');
-    for (var i = 0; i < newStrArray.length; i++) {
-        var letter = newStrArray[0];
-        if (i === 0) {
-            if (letter === 'a' || letter === 'e' || letter === 'i' || letter === 'o' || letter === 'u') {
-                newStrArray.push('way');
-                break;
-            } else {
-                newStrArray.push(newStrArray.splice(0, 1)[0]);
-            }
-        } else {
-            if (letter === 'a' || letter === 'e' || letter === 'i' || letter === 'o' || letter === 'u') {
-                newStrArray.push('ay');
-                break;
-            } else {
-                newStrArray.push(newStrArray.splice(0, 1)[0]);
-            }
-        }
-    }
-    return newStrArray.join('');
-}
-console.log(translatePigLatin("pig"));
-console.log(translatePigLatin("latin"));
-
-*/

@@ -42,103 +42,105 @@
             </div>
         </nav>
     </header>
+    <main>
+        <div id="mainContainer" class="container">
+            <article>
+                <h1>Census Form</h1>
 
-    <div id="mainContainer" class="container">
-        <h1>Census Form</h1>
-
-        <form id="cenusesform">
-            <div class="form-group">
-                <label for="fullName">*Full Name</label>
-                <input name="fullName" type="text" id="fullName" placeholder="Enter Your Full Name" class="form-control" required>
-                <small class="form-text text-muted">Enter your Full Name as printed on your ID</small>
-            </div>
-
-            <div class="row">
-                <div class="col-sm-6">
+                <form id="cenusesform">
                     <div class="form-group">
-                        <label for="citizenID">*Citizen ID:</label>
-                        <input name="citizenID" type="number" id="citizenID" placeholder="XXXXXXXXXX" title="enter 10 digit number" class="form-control" required minlength="10" pattern="^\d{10}$" required <small class="form-text text-muted">Enter your
-                        ID
-                        </small>
+                        <label for="fullName">*Full Name</label>
+                        <input name="fullName" type="text" id="fullName" placeholder="Enter Your Full Name" class="form-control" required>
+                        <small class="form-text text-muted">Enter your Full Name as printed on your ID</small>
                     </div>
-                </div>
-                <div class="form-group">
-                    <label for="state">*State:</label>
 
-                    <select id="state" name="state" class=' form-control ' required>                                
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="citizenID">*Citizen ID:</label>
+                                <input name="citizenID" type="number" id="citizenID" placeholder="XXXXXXXXXX" title="enter 10 digit number" class="form-control" required minlength="10" pattern="^\d{10}$" required <small class="form-text text-muted">Enter
+                                your ID
+                                </small>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="state">*State:</label>
+
+                            <select id="state" name="state" class=' form-control ' required>                                
                         <option value="" selected>...choose...</option>
                         <option value="New Mexico">New Mexico</option>
                         <option value="Arizona">AZ</option>
                         <option value="Texas">TX</option>
                     </select>
-                    <small class="form-text text-muted">Select Your State of Residence</small>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-sm-6">
-                    <div class="form-group">
-                        <label for="ssn">*Social Security Number: </label>
-                        <input type="text" id="ssn" name="socialSecurity" placeholder="XXX-XX-XXXX" class="form-control" title="SSN, formate like XXX-XX-XXXX" pattern="^\d{3}-\d{2}-\d{4}$">
-                        <small class="form-text text-muted">Enter Your Social Security Number (in the format shown)</small>
+                            <small class="form-text text-muted">Select Your State of Residence</small>
+                        </div>
                     </div>
-                </div>
 
-                <div class="col-sm-6">
-                    <div class="form-group">
-                        <label>*Senior Citizen? </label>
-                        <br>
-                        <input type="radio" id="yesSenior" name="senior" value="Yes" required>
-                        <label for="yesSenior">Yes </label>
-                        <input type="radio" id="noSenior" name="senior" value="No" required>
-                        <label for="yesSenior">No </label>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="ssn">*Social Security Number: </label>
+                                <input type="text" id="ssn" name="socialSecurity" placeholder="XXX-XX-XXXX" class="form-control" title="SSN, formate like XXX-XX-XXXX" pattern="^\d{3}-\d{2}-\d{4}$">
+                                <small class="form-text text-muted">Enter Your Social Security Number (in the format shown)</small>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label>*Senior Citizen? </label>
+                                <br>
+                                <input type="radio" id="yesSenior" name="senior" value="Yes" required>
+                                <label for="yesSenior">Yes </label>
+
+                                <input type="radio" id="noSenior" name="senior" value="No" required>
+                                <label for="noSenior">No </label>
+                            </div>
+                        </div>
+
+
+
                     </div>
-                </div>
+
+                    <div id="buttons">
+                        <input type="reset" value="Reset" class="btn btn-secondary btn-lg">
+                        <input type="submit" value="Submit" id="submitButton" class="btn btn-primary btn-lg">
+                    </div>
+
+                </form>
+            </article>
+            <article>
+                <table class="table" name="mytable" id="mytable">
+                    <thead>
+                        <tr>
+                            <th scope="col">Citizen ID</th>
+                            <th scope="col">Social Security</th>
+                            <th scope="col">Full Name</th>
+                            <th scope="col">State</th>
+                            <th scope="col">Senior</th>
+                        </tr>
+                    </thead>
+                    <tbody id="listOfPeople">
+                        <tr>
+                            <td>1234567890</td>
+                            <td>123-45-6789</td>
+                            <td>Anna H. Smith</td>
+                            <td>New Mexico</td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td>1234567891</td>
+                            <td>123-45-6788</td>
+                            <td>Bob J. Harrison</td>
+                            <td>Arizona</td>
+                            <td>No</td>
+                        </tr>
+                    </tbody>
+                </table>
 
 
-
-            </div>
-
-            <div id="buttons">
-                <input type="reset" value="Reset" class="btn btn-secondary btn-lg">
-                <input type="submit" value="Submit" id="submitButton" class="btn btn-primary btn-lg">
-            </div>
-
-        </form>
-
-        <br>
-
-        <table class="table" name="mytable" id="mytable">
-            <thead>
-                <tr>
-                    <th scope="col">Citizen ID</th>
-                    <th scope="col">Social Security</th>
-                    <th scope="col">Full Name</th>
-                    <th scope="col">State</th>
-                    <th scope="col">Senior</th>
-                </tr>
-            </thead>
-            <tbody id="listOfPeople">
-                <tr>
-                    <td>1234567890</td>
-                    <td>123-45-6789</td>
-                    <td>Anna H. Smith</td>
-                    <td>New Mexico</td>
-                    <td>Yes</td>
-                </tr>
-                <tr>
-                    <td>1234567891</td>
-                    <td>123-45-6788</td>
-                    <td>Bob J. Harrison</td>
-                    <td>Arizona</td>
-                    <td>No</td>
-                </tr>
-            </tbody>
-        </table>
-
-
-    </div>
-
+        </div>
+        </article>
+    </main>
     <footer>
         <div>
             <span style="margin-left: 1em;">&copy; Birhane G. Gebre ::: April 2020</span>
