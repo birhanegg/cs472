@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>census app</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Mini APP, client side UI development">
+    <meta name="author" content="Birhane G. Gebre">
+    <link href="images/favicon.png" type="images/ico" rel="Icon" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link href="css/styles.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">Home</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+            <div class="collapse navbar-collapse" id="navbarColor02">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="aboutUs.html">About Us<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="virtual_Tour_project.html">Virtual Toure</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="booksList.html">Books</a>
+                    </li>
+
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input id="searchTerm" class="form-control mr-sm-2" type="text" placeholder="Search">
+                    <button id="searchButton" class="btn btn-secondary my-2 my-sm-0" type="button">Search</button>
+                </form>
+                <form class="nav-link">
+                    <span class="navbar-brand" type="text">Wellcome , Geust </span>
+                </form>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <h3>Books in our Collection</h3>
+            <span class="navbar navbar-expand -g navbar-light bg-dark" style="float:right;"><a href="addnewbook.html">Add a New
+                    Book</a></span>
+        </div>
+        <div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">ISBN</th>
+                        <th scope="col">BookTitle</th>
+                        <th scope="col">Overdue Fee</th>
+                        <th scope="col">Publisher</th>
+                        <th scope="col">Date Published</th>
+                    </tr>
+                </thead>
+                <tbody id="display">
+                </tbody>
+            </table>
+
+
+        </div>
+    </main>
+
+
+    <footer class="footer">
+        <div class="container">
+            <span>Birhane G. Gebre</span>
+            <span style="float:right">@April 2020</span>
+        </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js "></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js "></script>
+    <script src="jS/script.js"></script>
+</body>
+
+</html>
